@@ -1,0 +1,27 @@
+%header チャットグループが作成されました
+.chat-side
+  .chat-side__user
+    .chat-side__user__contents
+      %p ユーザー名
+      %a.fa.fa-cog{href: ''}
+      %a.fa.fa-pencil-square-o{href: ''}
+  .chat-side__group
+    %p.chat-side__group__name チャットグループ名
+    %p.chat-side__group__message メッセージ
+.chat-main
+  .chat-main__header
+    .chat-main__header__content
+      %p.chat-main__header__content__groupname チャットグループ名
+      %a.chat-main__header__content__editbutton{href: ''} Edit
+    %p.chat-main__header__members メンバー一覧
+  .chat-main__body
+    .chat-main__body__content
+      %p.chat-main__body__content__name 送信者
+      %p.chat-main__body__content__date 日付
+      %p.chat-main__body__content__message メッセージ
+  .chat-main__footer
+    .chat-main__footer__contents
+      .chat-main__footer__contents__input
+        %input{placeholder: "type a message"}
+        %a.fa.fa-image{href: ''}
+      %a.sendbutton{href:''} Send

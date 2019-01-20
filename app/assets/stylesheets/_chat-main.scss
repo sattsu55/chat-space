@@ -1,0 +1,99 @@
+.chat-main{
+  float:right;
+  height:100vh;
+  width:calc(100vw - 300px);
+  &__header{
+    height:15%;
+    padding: 0 40px;
+    position:relative;
+    &__content{
+      line-height:90%;
+      &__groupname{
+        font-size:20px;
+        color:#333333;
+        float:left;
+        line-height:50px;
+      }
+      &__editbutton{
+        float:right;
+        text-decoration: none;
+        color: #38AEF0;
+        font-size: 15px;
+        padding: 12px 20px;
+        margin: 28px 20px 0;
+        border: 1px solid #38AEF0;
+      }
+    }
+    &__members{
+      font-size:12px;
+      color:#999999;
+      clear:both;
+    }
+  }
+  &__body{
+    height:75%;
+    padding: 0 40px;
+    &__content{
+      padding:20px 0;
+      &__name{
+        font-size:16px;
+        color:#434A54;
+        float:left;
+        margin-right:10px;
+      }
+      &__date{
+        font-size:12px;
+        color:#999999;
+        float:left;
+      }
+      &__message{
+        font-size:14px;
+        color:#434A54;
+        clear:both;
+      }
+    }
+  }
+  &__footer{
+    height:10%;
+    padding: 0 40px;
+    background-color:gray;
+    position:relative;
+    &__contents{
+      position:absolute;
+      width:calc(100% - 80px);
+      top:0;
+      bottom:0;
+      margin:auto 0;
+      height:50px;
+      line-height:50px;
+      &__input{
+        float:left;
+        width:calc(100% - 150px);
+        position:relative;
+        input{
+          height:50px;
+          width:100%;
+          border:none;
+        }
+        a.fa.fa-image{
+          color:black;
+          position:absolute;
+          top:0;
+          right:0;
+          height:50px;
+          line-height:50px;
+          margin-right:10px;
+        }
+      }
+      a.sendbutton{
+        color:#fff;
+        width:100px;
+        text-align:center;
+        background-color:#38AEF0;
+        border:none;
+        text-decoration: none;
+        float:right;
+      }
+    }
+  }
+}
