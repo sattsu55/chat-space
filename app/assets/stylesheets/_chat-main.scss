@@ -57,36 +57,42 @@
     height:10%;
     padding: 0 40px;
     background-color:gray;
+    position:relative;
     &__contents{
-      position:relative;
-      input{
-        height:50px;
+      position:absolute;
+      width:calc(100% - 80px);
+      top:0;
+      bottom:0;
+      margin:auto 0;
+      height:50px;
+      line-height:50px;
+      &__input{
+        float:left;
         width:calc(100% - 150px);
-        margin:20px 0;
-        border:none;
-      }
-      a.fa.fa-image{
-        height:50px;
-        width:40px;
-        margin:32px 130px 20px 0;
-        position:absolute;
-        top:0;
-        right:0;
-        color:gray;
+        position:relative;
+        input{
+          height:50px;
+          width:100%;
+          border:none;
+        }
+        a.fa.fa-image{
+          color:black;
+          position:absolute;
+          top:0;
+          right:0;
+          height:50px;
+          line-height:50px;
+          margin-right:10px;
+        }
       }
       a.sendbutton{
         color:#fff;
         width:100px;
-        height:50px;
-        line-height:50px;
         text-align:center;
         background-color:#38AEF0;
-        margin:20px 0;
-        position:absolute;
-        top:0;
-        right:0;
         border:none;
         text-decoration: none;
+        float:right;
       }
     }
   }
