@@ -2,12 +2,12 @@
   float:left;
   width:300px;
   height:100vh;
-  .chat-side__user{
+  &__user{
     background-color:#253141;
     height:15%;
     padding: 0 20px;
     position:relative;
-    .chat-side__user__contents{
+    &__contents{
       height:50px;
       line-height:50px;
       position:absolute;
@@ -27,17 +27,17 @@
       }
     }
   }
-  .chat-side__groups{
+  &__group{
     background-color:#2f3e51;
     height:85%;
     padding: 0 20px;
-    .chat-side__group__name{
+    &__name{
       color:#FFF;
       font-size:15px;
       padding-top:20px;
       padding-bottom:5px;
     }
-    .chat-side__group__message{
+    &__message{
       color:#FFF;
       font-size:11px;
       padding-bottom:40px;
