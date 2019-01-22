@@ -10,10 +10,13 @@
       %a
         =link_to new_group_path do
           = fa_icon 'pencil-square-o', class: 'icon'
-        / .fa.fa-pencil-square-o{href: ''}
   .chat-side__group
-    %p.chat-side__group__name チャットグループ名
-    %p.chat-side__group__message メッセージ
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません。
 .chat-main
   .chat-main__header
     .chat-main__header__content
