@@ -30,8 +30,8 @@ Things you may want to cover:
 |name|string|null: false, unique: true|
 
 ### Association
-- has_many :group-users
-- has_many :users ,through: :group-users
+- has_many :group_users
+- has_many :users ,through: :group_users
 
 
 ## group_usersテーブル
@@ -55,8 +55,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :messages
-- has_many :group-users
-- has_many :groups ,through: :group-users
+- has_many :group_users
+- has_many :groups ,through: :group_users
 
 
 ## messageテーブル
