@@ -30,11 +30,11 @@ Things you may want to cover:
 |name|string|null: false, unique: true|
 
 ### Association
-- has_many :group-user
-- has_many :user ,through: :group-user
+- has_many :group-users
+- has_many :users ,through: :group-users
 
 
-## group-usersテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -54,9 +54,9 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 
 ### Association
-- has_many :message
-- has_many :group-user
-- has_many :group ,through: :group-user
+- has_many :messages
+- has_many :group-users
+- has_many :groups ,through: :group-users
 
 
 ## messageテーブル
@@ -69,6 +69,6 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :user
-- has_many :group
+- has_many :users
+- has_many :groups
 
