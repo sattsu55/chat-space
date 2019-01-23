@@ -2,10 +2,7 @@
   = render partial: 'shared/side_bar'
 .chat-main
   .chat-main__header
-    .chat-main__header__content
-      %p.chat-main__header__content__groupname チャットグループ名
-      %a.chat-main__header__content__editbutton{href: ''} Edit
-    %p.chat-main__header__members メンバー一覧
+    = render partial: 'group'
   .chat-main__body
     = render partial: 'message', collection: @messages
   / .chat-main__body
