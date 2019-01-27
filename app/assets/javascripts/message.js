@@ -5,7 +5,7 @@ $(function(){
                   ${message.created_at}<br>
                   ${message.content}<br>
                 </p>
-                <img src="${message.image_url}">
+                  <img src="${message.image_url}">
                 `
     return html;
   }
@@ -26,10 +26,9 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__body').append(html)
+      $(".chat-main__body").scrollTop( $(".chat-main__body")[0].scrollHeight )
       $('.form__message').val('')
       $('.form__submit').attr('disabled', false)
-      var move = $('.message').offset().top;
-      $('html,body').animate({scrollTop:move});
     })
     .fail(function(){
       alert('error');
