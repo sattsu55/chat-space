@@ -1,8 +1,8 @@
 .chat-main__header__content
   .chat-main__header__content__groupname
-    チャットグループ名
-  .chat-main__header__content__editbutton{href: ''}
-    Edit
+    =@group.name
+  .chat-main__header__content__editbutton
+    =link_to "Edit", edit_group_path(@group)
 .chat-main__header__members
   -@group.users.each do |user|
     = user.name
