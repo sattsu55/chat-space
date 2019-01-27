@@ -1,8 +1,12 @@
 $(function(){
   function buildHTML(message){
     var html = `<p>
-                  ${message.content}
-                </p>`
+                  ${message.user_name}<br>
+                  ${message.created_at}<br>
+                  ${message.content}<br>
+                </p>
+                <img src="${message.image_url}">
+                `
     return html;
   }
 
