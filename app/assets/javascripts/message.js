@@ -23,6 +23,7 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__body').append(html)
       $('.form__message').val('')
+      $('.form__submit').attr('disabled', false)
     })
     .fail(function(){
       alert('error');
