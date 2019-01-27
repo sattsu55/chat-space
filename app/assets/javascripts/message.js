@@ -28,7 +28,7 @@ $(function(){
       $('.chat-main__body').append(html)
       $('.form__message').val('')
       $('.form__submit').attr('disabled', false)
-      var move = $('.chat-main__body').offset().top;
+      var move = $('.message').offset().top;
       $('html,body').animate({scrollTop:move});
     })
     .fail(function(){
