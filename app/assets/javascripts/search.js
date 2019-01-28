@@ -10,13 +10,6 @@ function appendUser(users){
   search_result.append(html);
 }
 
-// function appendNoUser(users){
-//   var html = `<p>
-//                 失敗
-//               </p>`
-//   search_result.append(html);
-// }
-
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
     $.ajax({
@@ -33,10 +26,8 @@ function appendUser(users){
            appendUser(users);
          });
        }
-       // else {
-       //   appendNoUser();
-       // }
     })
+
     .fail(function() {
       alert('通信に失敗しました');
     });
