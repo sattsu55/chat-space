@@ -3,18 +3,19 @@ $(function() {
 var search_result = $("#user-search-result");
 
 function appendUser(users){
-  var html = `<p>
-                成功
-              </p>`
+  var html = `<div class="chat-group-user clearfix">
+  <p class="chat-group-user__name">${users.name}</p>
+  <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${users.id}" data-user-name="${users.name}">追加</a>
+</div>`
   search_result.append(html);
 }
 
-function appendNoUser(users){
-  var html = `<p>
-                失敗
-              </p>`
-  search_result.append(html);
-}
+// function appendNoUser(users){
+//   var html = `<p>
+//                 失敗
+//               </p>`
+//   search_result.append(html);
+// }
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
@@ -32,12 +33,12 @@ function appendNoUser(users){
            appendUser(users);
          });
        }
-       else {
-         appendNoUser("何か入れてね");
-       }
+       // else {
+       //   appendNoUser();
+       // }
     })
-    // .fail(function() {
-    //   alert('error');
-    // });
+    .fail(function() {
+      alert('通信に失敗しました');
+    });
   });
 });
