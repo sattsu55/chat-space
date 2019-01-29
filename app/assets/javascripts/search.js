@@ -38,7 +38,7 @@ function appendUserToMember(users){
         });
         $('#user-search-result').ready(function(){
           $(".chat-group-user__btn--add").on("click",function(){
-            console.log(this)
+            $("#user-search-result").empty();
             users.forEach(function(users){
               appendUserToMember(users)
             });
