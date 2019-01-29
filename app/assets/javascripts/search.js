@@ -42,6 +42,11 @@ function appendUserToMember(users){
             users.forEach(function(users){
               appendUserToMember(users)
             });
+            $('.js-chat-member').ready(function(){
+              $('.js-remove-btn').on("click",function(){
+                $(".js-chat-member").empty();
+              })
+            })
           });
         });
       }
@@ -52,4 +57,3 @@ function appendUserToMember(users){
     });
   });
 });
-
