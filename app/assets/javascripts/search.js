@@ -20,12 +20,17 @@ function appendUser(users){
     })
 
     .done(function(users) {
-       $("#user-search-result").empty();
-       if (users.length !== 0) {
-         users.forEach(function(users){
-           appendUser(users);
-         });
-       }
+      $("#user-search-result").empty();
+      if (users.length !== 0) {
+        users.forEach(function(users){
+          appendUser(users);
+        });
+        $('#user-search-result').ready(function(){
+          $(".chat-group-user__btn--add").on("click",function(){
+            console.log(this)
+          });
+        });
+      }
     })
 
     .fail(function() {
@@ -33,3 +38,4 @@ function appendUser(users){
     });
   });
 });
+
