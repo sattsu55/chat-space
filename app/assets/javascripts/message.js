@@ -1,10 +1,12 @@
 $(function(){
   function buildHTML(message){
-    var html = `<p>
+    var html = `<div class = "message" data-id = "${message.id}">
+                  <p>
                   ${message.user_name}<br>
                   ${message.created_at}<br>
                   ${message.content}<br>
-                </p>`
+                </p>
+                </div>`
     return html;
   }
   $('.new_message').on('submit', function(e){
