@@ -1,11 +1,12 @@
 $(function(){
   function buildHTML(message){
     var html = `<div class = "message" data-id = "${message.id}">
-                  <p>
-                  ${message.user_name}<br>
-                  ${message.created_at}<br>
-                  ${message.content}<br>
-                </p>
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">${message.user_name}</div>
+                    <div class="upper-message__date">${message.created_at}</div>
+                  </div>
+                  <div class = "lower-message">
+                  <p class="lower-message__content">${message.content}</p></div>
                 </div>`
     return html;
   }
@@ -23,11 +24,11 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.chat-main__body').append(html)
+      $('.messages').append(html)
       if(data.image_url){
-        $('.chat-main__body').append(`<img src="${data.image_url}">`)
+        $('.messages').append(`<img src="${data.image_url}">`)
       }
-      $(".chat-main__body").scrollTop( $(".chat-main__body")[0].scrollHeight )
+      $(".messages").scrollTop( $(".messages")[0].scrollHeight )
       $('.form__message').val('')
       $('.form__submit').attr('disabled', false)
     })
