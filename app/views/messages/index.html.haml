@@ -3,19 +3,8 @@
 .chat-main
   .chat-main__header
     = render partial: 'group'
-  .chat-main__body
+  .messages
     = render partial: 'message', collection: @messages
-  / .chat-main__body
-  /   .chat-main__body__content
-  /     %p.chat-main__body__content__name 送信者
-  /     %p.chat-main__body__content__date 日付
-  /     %p.chat-main__body__content__message メッセージ
-  / .chat-main__footer
-  /   .chat-main__footer__contents
-  /     .chat-main__footer__contents__input
-  /       %input{placeholder: "type a message"}
-  /       %a.fa.fa-image{href: ''}
-  /     %a.sendbutton{href:''} Send
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
