@@ -43,10 +43,13 @@ function appendUsermiss(){
       }
       $('#user-search-result').ready(function(){
         $(".chat-group-user__btn--add").on("click",function(){
-          $("#user-search-result").empty();
-          users.forEach(function(users){
-            appendUserToMember(users);
+          var id = $(this).attr('data-user-id')
+          users.forEach(function(user){
+            if (user.id == id){
+              appendUserToMember(user);
+            }
           });
+          $("#user-search-result").empty();
         });
       });
     })
